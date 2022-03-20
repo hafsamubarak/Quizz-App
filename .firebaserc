@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "quizz-app-b570b": {
+      "hosting": {
+        "QuizzApp": [
+          "quizz-app-b570b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "quizz-app-b570b"
+  }
+}

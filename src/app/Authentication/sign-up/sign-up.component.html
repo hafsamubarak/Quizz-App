@@ -1,0 +1,76 @@
+<div class="forma d-flex">
+  <form style="width: 30%" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <h1
+      style="
+        font-weight: bold;
+        color: #38b9db;
+        margin-bottom: 10%;
+        text-align: center;
+      "
+    >
+      Sign UP
+    </h1>
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3" style="color: #004f71"
+        >User name</label
+      >
+      <input
+        type="text"
+        id="form3Example3"
+        class="form-control"
+        formControlName="displayName"
+        required
+        name="displayName"
+        [formControl]="usernameControl"
+      />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3" style="color: #004f71"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        [formControl]="emailControl"
+        formControlName="email"
+        required
+      />
+    </div>
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example4" style="color: #004f71"
+        >Password</label
+      >
+      <input
+        type="password"
+        class="form-control"
+        formControlName="password"
+        required
+        [formControl]="passwordControl"
+      />
+    </div>
+
+    <!-- Checkbox -->
+
+    <!-- Submit button -->
+    <div class="d-flex">
+      <button
+        type="button"
+        class="btn justify-content-center"
+        style="
+          background-color: #004f71;
+          color: white;
+          margin-left: 40%;
+          margin-bottom: 5%;
+        "
+        type="submit"
+      >
+        Sign up
+      </button>
+    </div>
+  </form>
+</div>

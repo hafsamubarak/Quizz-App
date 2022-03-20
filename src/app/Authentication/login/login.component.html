@@ -1,0 +1,40 @@
+<div class="d-flex">
+  <div class="mb-3 row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input
+        type="email"
+        class="form-control"
+        id="staticEmail"
+        name="email"
+        #email
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword"
+        name="password"
+        #password
+      />
+    </div>
+  </div>
+  <button
+    type="button"
+    class="btn justify-content-center"
+    type="submit"
+    (click)="firebase.signIn(email.value, password.value)"
+  >
+    Login
+  </button>
+</div>
+<div>
+  You don't have an account? you can register here
+  <span class="name col-md-4 my-3">
+    <button class="btn btn-primary" routerLink="/signup">Sign UP</button>
+  </span>
+</div>
